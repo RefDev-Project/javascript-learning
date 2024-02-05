@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Find</title>
+</head>
+
+<body>
+    <script>
+        const students = [
+            {
+                name: 'Harry',
+                score: 60,
+            },
+            {
+                name: 'James',
+                score: 88,
+            },
+            {
+                name: 'Ron',
+                score: 90,
+            },
+            {
+                name: 'Bethy',
+                score: 75,
+            }
+        ];
+
+        const findJames = students.find((student) => student.name === "James");
+        console.log(findJames);
+    </script>
+
+</body>
+
+</html>

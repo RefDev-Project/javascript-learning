@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Error</title>
+</head>
+
+<body>
+    <script>
+        class ValidationError extends Error {
+            constructor(message) {
+                super(message);
+                this.name = "ValidationError";
+            }
+        }
+
+        const json = '{"age":30}';
+
+        try {
+            const user = JSON.parse(json);
+
+            if (!user.name) {
+                throw new ValidationError('"name" is required');
+            } else if (!user.age) {
+                throw new ValidationError('"age" is required');
+            }
+            console.log(user.name);
+            console.log(user.age);
+
+        } catch (error) {
+            if (error instanceof ValidationError) {
+                console.log(`JSON Syntax Error: ${error.message}`);
+            } else if (error instanceof ReferenceError) {
+                console.log(error.message)
+            } else {
+                console.log(error.stack);
+            }
+        }
+    </script>
+</body>
+
+</html>

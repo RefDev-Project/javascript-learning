@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functional Programming</title>
+</head>
+
+<body>
+    <script>
+        // gaya imperatif (how to solve)
+        const names = ['Harry!', 'Ron!', 'Hermione!', 'Thomas!'];
+
+        const newNames = [];
+
+        for (let i = 0; i < names.length; i++) {
+            newNames.push(`${names[i]}!`);
+        }
+
+        console.log(newNames);
+
+        // gaya deklaratif (what to solve)
+        const fruits = ['Apple!', 'Orange!', 'Pear!'];
+
+        const newFruits = [];
+
+        fruits.map((fruit) => {
+            newFruits.push(`${fruit}!`);
+        })
+
+        console.log(newFruits);
+
+    </script>
+</body>
+
+</html>

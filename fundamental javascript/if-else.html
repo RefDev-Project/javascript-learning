@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Else Statement</title>
+</head>
+
+<body>
+    <script>
+        // if 
+        let isRainning = true;
+        if (isRainning) {
+            console.log("Hari ini hujan. Bawa Payung!")
+        }
+        console.log("Berangkat Kegiatan...")
+
+        // if else
+        let x = 50;
+        if (x > 70) {
+            console.log(`${x} lebih besar dari 70`);
+        } else {
+            console.log(`${x} lebih kecil dari 70`);
+        }
+
+        // if else if
+        let language = "English";
+        let greeting = "Selamat Pagi";
+
+        if (language === "English") {
+            greeting = "Good Morning!";
+        } else if (language === "French") {
+            greeting = "Bonjour!";
+        } else if (language === "Japanese") {
+            greeting = "Ohayou Gozaimasu!";
+        }
+        console.log(greeting)
+
+        // ternary operator
+        const isMember = true;
+        const discount = isMember ? 0.1 : 0;
+
+        console.log(`Your Discount : ${discount * 100}%`);
+
+
+        // Truthy & Falsy
+        let name = "";
+
+        if (name) {
+            console.log(`Halo, ${name}`);
+        } else {
+            console.log("Nama Masih Kosong");
+        }
+    </script>
+</body>
+
+</html>

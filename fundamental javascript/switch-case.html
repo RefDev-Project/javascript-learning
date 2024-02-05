@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case</title>
+</head>
+
+<body>
+    <script>
+        let language = "English";
+        let greeting = null;
+
+        switch (language) {
+            case "English":
+                greeting = "Good Morning";
+                break;
+            case "French":
+                greeting = "Bonjour";
+                break;
+            case "Japanese":
+                greeting = "Ohayou Gozaimasu";
+                break;
+            default:
+                greeting = "Selamat Pagi!";
+        }
+
+        console.log(greeting);
+    </script>
+</body>
+
+</html>

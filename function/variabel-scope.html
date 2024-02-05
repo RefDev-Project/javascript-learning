@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Scope</title>
+</head>
+
+<body>
+    <script>
+        // global variable, dapat diakses pada parent() dan child()
+        const a = 'a';
+
+        function parent() {
+            // local variable, dapat diakses pada parent() dan child(), tetapi tidak dapat diakses di luar dari fungsi tersebut.
+            const b = 'b';
+
+            function child() {
+                // local variable, dapat diakses hanya pada fungsi child().
+                const c = 'c';
+            }
+        }
+    </script>
+</body>
+
+</html>

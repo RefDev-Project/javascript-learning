@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pewarisan</title>
+</head>
+
+<body>
+    <script>
+        // inheritance
+
+        // superclass
+        class MailService {
+            constructor(sender) {
+                this.sender = sender;
+            }
+
+            sendMessage(message, receiver) {
+                console.log(`${this.sender} sent ${message} to ${receiver}`);
+            }
+        }
+
+        // subclass
+        class WhatsappService extends MailService {
+            sendBroadcastMessage(message, receivers) {
+                for (const receiver of receivers) {
+                    this.sendMessage(message, receiver);
+                }
+            }
+        }
+
+        class EmailService extends MailService {
+            sendDelayMessage(message, receiver, delay) {
+                setTimeout(() => {
+                    this.sendMessage(message, receiver);
+                }, delay);
+            }
+        }
+
+
+        const whatsApp = new WhatsappService('+628123456789');
+        const email = new EmailService('pEiJm@example.com');
+
+        whatsApp.sendMessage('hello world', '+628987654321');
+        whatsApp.sendBroadcastMessage('broadcast', ['+628987654321', '+628987654322']);
+        whatsApp.sendDelayMessage(); // Error
+
+        email.sendMessage('hello world', 'pEiJm@example.com');
+        email.sendDelayMessage('hello email', 'pEiJm@example.com', 3000);
+        email.sendBroadcastMessage(); // Error
+    </script>
+</body>
+
+</html>

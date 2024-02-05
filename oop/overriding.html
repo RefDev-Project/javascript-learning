@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overriding</title>
+</head>
+
+<body>
+    <script>
+        // constructor overriding
+        class MailService {
+            constructor(sender) {
+                this.sender = sender;
+            }
+        }
+
+        class WhatsappService extends MailService {
+            // constructor overriding
+            constructor(sender, isBusiness) {
+                super(sender);
+
+                this.isBusiness = isBusiness;
+            }
+        }
+
+        // method overriding
+        class MailService2 {
+            constructor(sender) {
+                this.sender = sender;
+            }
+
+            // method
+            sendMessage(message, receiver) {
+                console.log(`${this.sender} sent ${message} to ${receiver}`);
+            }
+        }
+
+        class WhatsappService2 extends MailService {
+            constructor(sender, isBusiness) {
+                super(sender);
+                this.isBusiness = isBusiness;
+            }
+            // overriding method
+            sendMessage(message, receiver) {
+                console.log(`${this.sender} sent ${message} to ${receiver} via whatsapp )`);
+            }
+        }
+
+        const mailService = new MailService2('someSender');
+        const whatsappService = new WhatsappService2('someSender', true);
+
+        mailService.sendMessage('Hai, Apa kabar?', 'someReceiver');
+        whatsappService.sendMessage('Hai, Apa Kabar?', '+6289876543210');
+
+    </script>
+</body>
+
+</html>

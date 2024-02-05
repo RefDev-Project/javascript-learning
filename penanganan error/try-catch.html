@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try & Catch</title>
+</head>
+
+<body>
+    <script>
+        // try catch
+        try {
+            console.log("Awal Block Try");
+            errorCode;
+            console.log("Akhir Block Try");
+        } catch (error) {
+            console.log(error.name);
+            console.log(error.message);
+            console.log(error.stack);
+        }
+
+
+        // try catch & finally
+        try {
+            console.log("Awal Block Try");
+            console.log("Akhir Block Try");
+        } catch (error) {
+            console.log(error.name);
+        } finally {
+            console.log("Akan Tetap Dieksekusi");
+        }
+    </script>
+</body>
+
+</html>

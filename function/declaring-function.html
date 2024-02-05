@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaring Function</title>
+</head>
+
+<body>
+    <script>
+        // function declaration
+        function greetting() {
+            console.log("Good Morning!")
+        }
+
+        greetting();
+
+        // parameter function
+        function greetting2(name, language) {
+            if (language === "English") {
+                console.log(`Good Morning ${name}!`);
+            } else if (language === "French") {
+                console.log(`Bonjour ${name}!`);
+            } else {
+                console.log(`Selamat Pagi ${name}!`);
+            }
+        }
+
+        greetting2('Refsi', 'French');
+
+        // return function
+        function greetting3(name, language) {
+            if (language === "English") {
+                return "Good Morning " + name + "!";
+            } else if (language === "French") {
+                return "Bonjour " + name + "!";
+            } else {
+                return "Selamat Pagi " + name + "!";
+            }
+        }
+
+        let hasil = greetting3('Refsi', 'English');
+        console.log(hasil);
+
+        // Expression Function
+        const greeting4 = function (name, language) {
+            if (language === "English") {
+                return "Good Morning " + name + "!";
+            } else if (language === "French") {
+                return "Bonjour " + name + "!";
+            } else {
+                return "Selamat Pagi " + name + "!";
+            }
+        }
+
+        console.log(greeting4('Refsi', 'French'));
+    </script>
+</body>
+
+</html>

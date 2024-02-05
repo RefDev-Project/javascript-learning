@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properti & Method</title>
+</head>
+
+<body>
+    <script>
+        // properti class Car
+        class Car {
+            constructor(brand, color, maxSpeed, chassisNumber) {
+                this.brand = brand;
+                this.color = color;
+                this.maxSpeed = maxSpeed;
+                this.chassisNumber = `${brand}-${Math.floor(Math.random() * 1000) + 1}`;
+            }
+        }
+
+        const car1 = new Car('BMW', 'red', '200');
+        const car2 = new Car('Audi', 'bluw', '220');
+        const car3 = new Car('BMW', 'black', '250');
+
+        console.log(car1);
+        console.log(car2);
+        console.log(car3);
+
+        // properti class Mail
+        class Mail {
+            constructor(sender, receiver, subject, body) {
+                this.sender = sender;
+                this.receiver = receiver;
+                this.subject = subject;
+                this.body = body;
+            }
+        }
+
+        // properti getter & setter
+        class User {
+            constructor(firstName, lastName) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+            }
+
+            get fullName() {
+                return `${this.firstName} ${this.lastName}`;
+            }
+
+            set fullName(fullName) {
+                const [firstName, lastName] = fullName.split(' ');
+                this.firstName = firstName;
+                this.lastName = lastName;
+            }
+        }
+
+        const user = new User('John', 'Doe');
+        console.log(user);
+        console.log(user.fullName);
+
+        user.fullName = 'Fulan Fulanah';
+        console.log(user);
+        console.log(user.fullName);
+
+        // cara agar properti tidak bisa diubah
+        class Car2 {
+            constructor(brand, color, maxSpeed) {
+                this.brand = brand;
+                this.color = color;
+                this.color = maxSpeed;
+                this._chassisNumber = `${brand}-${Math.floor(Math.random() * 1000) + 1}`;
+            }
+
+            get chassisNumber() {
+                return this._chassisNumber;
+            }
+
+            set chassisNumber(chassisNumber) {
+                console.log("Chassis number can't be changed");
+            }
+        }
+        // instance object
+        const carNew = new Car2('BMW', 'red', '200');
+        console.log(carNew);
+
+        carNew.chassisNumber = 'BMW-120';
+        console.log(carNew.chassisNumber);
+
+        // ====================================================
+        // Method
+        class Car3 {
+            constructor(brand, color, maxSpeed) {
+                this.brand = brand;
+                this.color = color;
+                this.color = maxSpeed;
+                this._chassisNumber = this._generateChassisNumber();
+            }
+
+            get chassisNumber() {
+                return this._chassisNumber;
+            }
+
+            set chassisNumber(chassisNumber) {
+                console.log("Chassis number can't be changed");
+            }
+
+            // Methods
+            drive() {
+                console.log(`${this.brand} ${this.color} is driving`);
+            }
+
+            reverse() {
+                console.log(`${this.brand} ${this.color} is reversing`);
+            }
+
+            turn(direction) {
+                console.log(`${this.brand} ${this.color} is turning ${direction}`);
+            }
+
+            _generateChassisNumber() {
+                return `${this.brand}-${Math.floor(Math.random() * 1000) + 1}`;
+            }
+        }
+
+        const carObject = new Car3('BMW', 'red', '200');
+        console.log(carObject);
+        carObject.drive();
+        carObject.turn('left');
+        carObject.reverse();
+
+
+        // Member visibility #
+        class Car4 {
+            #chassisNumber = null;
+            constructor(brand, color, maxSpeed) {
+                this.brand = brand;
+                this.color = color;
+                this.color = maxSpeed;
+                this.#chassisNumber = this.#generateChassisNumber();
+            }
+
+            get chassisNumber() {
+                return this._chassisNumber;
+            }
+
+            set chassisNumber(chassisNumber) {
+                console.log("Chassis number can't be changed");
+            }
+
+            // Methods
+            drive() {
+                console.log(`${this.brand} ${this.color} is driving`);
+            }
+
+            reverse() {
+                console.log(`${this.brand} ${this.color} is reversing`);
+            }
+
+            turn(direction) {
+                console.log(`${this.brand} ${this.color} is turning ${direction}`);
+            }
+
+            #generateChassisNumber() {
+                return `${this.brand}-${Math.floor(Math.random() * 1000) + 1}`;
+            }
+        }
+
+        // const carNew2 = new Car4('BMW', 'red', '200');
+        // console.log(carNew2);
+
+        // carNew2.#chassisNumber = 'BMW-120';
+        // console.log(carNew2.#chassisNumber);
+    </script>
+</body>
+
+</html>

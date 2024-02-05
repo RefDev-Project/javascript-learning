@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Object</title>
+</head>
+
+<body>
+    <script>
+        // destructuring object ({})
+        const profile = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 18
+        }
+
+        const { firstName, lastName, age } = profile;
+
+        console.log(`Hello ${firstName} ${lastName}, Your age is ${age}`);
+
+        // destructuring assignment
+        const person = {
+            name: "John",
+            lastName: "Doe",
+            isMaried: false,
+        }
+
+        let name = "Dimas";
+        let isMaried = true;
+
+        ({ name, isMaried } = person);
+        console.log(name, isMaried);
+
+        // default value
+        const person2 = {
+            hobby: "futsal",
+            vision: "success",
+        }
+
+        const { hobby, vision, title = "nilai default" } = person2;
+        console.log(hobby, vision, title);
+
+        // assigning to different local variable names
+        const person3 = {
+            namaDepan: "Refsi",
+            namaAkhir: "Maulana"
+        }
+
+        const { namaDepan: firstName2, namaAkhir: lastName2 } = person3;;
+        console.log(firstName2, lastName2);
+    </script>
+</body>
+
+</html>

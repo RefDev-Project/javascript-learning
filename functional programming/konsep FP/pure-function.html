@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konsep Pure Function</title>
+</head>
+
+<body>
+    <script>
+        // pure function (tidak bergantung pada nilai diluar)
+        const newPerson = (person, age) => {
+            return { ...person, age }
+        }
+
+        const person = {
+            name: 'Boby'
+        }
+
+        const newPersonObject = newPerson(person, 20);
+        console.log(newPersonObject);
+        console.log(person);
+
+
+        // pure function
+        const hitungLuasLingkaran2 = (jariJari2) => {
+            return 3.14 * (jariJari2 * jariJari2);
+        }
+        console.log(hitungLuasLingkaran2(5));
+
+        // impure function
+        let pi = 3.14;
+        const hitungLuasLingkaran = (jariJari) => {
+            return pi * (jariJari * jariJari);
+        }
+
+        console.log(hitungLuasLingkaran(5));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Array</title>
+</head>
+
+<body>
+    <script>
+        // Destructuring Array
+        const favorites = ["Seafood", "Salad", "Nugget", "Soup"];
+
+        const [firstFood, secondFood, thirdFood, fourthFood] = favorites;
+
+        console.log(firstFood);
+        console.log(secondFood);
+        console.log(thirdFood);
+        console.log(fourthFood);
+
+        // Destructuring Assignment
+        const hobby = ["Badminton", "Basketball", "Futsal"];
+
+        let myHobby = "Volly Ball";
+        let herHobby = "Tennis";
+
+        [myHobby, herHobby] = hobby;
+        console.log(myHobby);
+        console.log(herHobby);
+
+        // Default Values
+        const favorites1 = ["Seafood", "Salad", "Nugget", "Soup"];
+        const [food1 = "Pizza", food2, food3, food4] = favorites1;
+
+        console.log(food1);
+        console.log(food2);
+        console.log(food3);
+        console.log(food4);
+    </script>
+</body>
+
+</html>

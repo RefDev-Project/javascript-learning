@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <script>
+        // array
+        let myArray = ["Cokelat", 42.5, 22, true, "Programming"];
+        console.log(myArray);
+
+        // mengakses array
+        console.log(myArray[1]);
+
+        // push()
+        myArray.push("Javascript");
+        console.log(myArray);
+
+        // pop()
+        myArray.pop();
+        console.log(myArray);
+
+        // shift()
+        myArray.shift();
+        console.log(myArray);
+
+        // unshift()
+        myArray.unshift("Pertama");
+        console.log(myArray);
+
+        // delete
+        delete myArray[1];
+        console.log(myArray);
+
+        // splice()
+        myArray.splice(1, 1);
+        console.log(myArray);
+
+        myArray.splice(1, 0, "Kedua", "Ketiga");
+        console.log(myArray);
+    </script>
+</body>
+
+</html>

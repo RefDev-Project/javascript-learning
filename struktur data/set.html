@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set</title>
+</head>
+
+<body>
+    <script>
+        // set
+        const mySet = new Set([1, 2, 3, 4]);
+        console.log(mySet);
+
+        // Add set
+        mySet.add(5);
+        mySet.add(6);
+        mySet.add(2);
+        mySet.add([7, 8, 9]); //menghasilkan 1 item
+        console.log(mySet);
+
+        // delete set
+        mySet.delete(1);
+        console.log(mySet);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Order Function</title>
+</head>
+
+<body>
+    <script>
+        // high order function (fungsi yang mempunyai fungsi sebagai parameter)
+        const hello = () => console.log('hello');
+        const say = (someFunction) => {
+            someFunction();
+        }
+        const sayHello = () => {
+            return () => {
+                console.log('Hello!');
+            }
+        }
+
+        hello();
+        say(hello);
+        sayHello()();
+    </script>
+</body>
+
+</html>

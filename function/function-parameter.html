@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Parameter</title>
+</head>
+
+<body>
+    <script>
+        // function parameter diambil dari nilai object menggunakan destructuring object {}
+        const user = {
+            id: 24,
+            displayName: "RMS",
+            fullName: "Refsi Maulana",
+        };
+
+        function introduce({ displayName, fullName }) {
+            console.log(`Hello, my name is ${displayName} ${fullName}`);
+        }
+
+        introduce(user);
+
+        // default parameters
+        function exponentsFormula(baseNumber, exponent = 2) {
+            const result = baseNumber ** exponent;
+            console.log(`${baseNumber}^${exponent} = ${result}`);
+        }
+
+        exponentsFormula(2);
+
+        // rest parameter
+        function sum(...numbers) {
+            let total = 0;
+            for (let number of numbers) {
+                total += number;
+            }
+            return total;
+        }
+
+        let result = sum(1, 2, 3, 4, 5);
+        console.log(result);
+    </script>
+</body>
+
+</html>

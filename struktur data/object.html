@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+
+<body>
+    <script>
+        // object
+
+        const user = {
+            firstName: "Refsi",
+            lastName: "Maulana",
+            age: 24,
+            isMarried: false,
+        };
+
+        console.log(`Halo Nama Saya ${user.firstName} ${user.lastName}`);
+        console.log(`Umur Saya ${user.age}`);
+
+        console.log(`Halo Nama Saya ${user["firstName"]} ${user.lastName}`);
+        console.log(`Umur Saya ${user.age}`);
+
+        // change property object
+        const spaceship = {
+            name: "Millenium Falcon",
+            manufacturer: "Corellian Engineering Corporation",
+            maxSpeed: 1200,
+            color: "Light Grey"
+        };
+
+        spaceship.maxSpeed = 1300; // change property
+        console.log(spaceship);
+
+        // add property object
+        spaceship.passengers = 9;
+        console.log(spaceship);
+
+        // delete property object
+        delete spaceship.passengers;
+        console.log(spaceship);
+
+    </script>
+</body>
+
+</html>

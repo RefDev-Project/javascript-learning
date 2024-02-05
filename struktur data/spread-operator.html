@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+
+<body>
+    <script>
+        // spread operator for array
+
+        const array = ["1,2,3,4,5"];
+        document.writeln(...array);
+
+        const myArray = ["Cokelat", 42.5, 22, true, "Programming"];
+        const yourArray = ['Javascript', ...myArray];
+        document.writeln(yourArray);
+
+        // spread operator for object
+
+        const object = {
+            firstName: "Refsi",
+            middleName: "Maulana",
+            lastName: "Siregar"
+        }
+
+        const newObject = {
+            ...object,
+        }
+        console.log(newObject);
+
+    </script>
+</body>
+
+</html>

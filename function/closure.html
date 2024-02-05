@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+
+<body>
+    <script>
+        function init() {
+            const name = 'Obi Wan';   // Variabel lokal di dalam scope fungsi init
+
+            function greet() {      // Inner function, merupakan contoh closure
+                console.log(`Halo, ${name}`);   // Memanggil variabel yang dideklarasikan di parent function
+            }
+
+            greet();
+        }
+
+        init();
+
+        /* output
+        Halo, Obi Wan
+         */
+
+        function init() {
+            const name = 'Obi Wan';
+
+            function greet() {
+                console.log(`Halo, ${name}`);
+            }
+            return greet;
+        }
+
+        const myFunction = init();
+        myFunction();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data</title>
+</head>
+
+<body>
+    <script>
+        // undefined
+        let x;
+        console.log(typeof (x));
+
+        // numbers
+        let y = 10;
+        console.log(typeof (y));
+
+        let z = 10.5;
+        console.log(typeof (z));
+
+        let a = 12;
+        let b = 9;
+
+        console.log(a + b);
+        console.log(a - b);
+        console.log(a / b);
+        console.log(a * b);
+        console.log(a % b);
+
+        let positif = 5;
+        console.log(positif++);
+        console.log(positif);
+
+        let negatif = -6;
+        console.log(negatif--);
+        console.log(negatif);
+
+        // BigInt
+        let big = 1234567890123456789012345678901234567890n;
+        let myInt = 1234567890123456789012345678901234567890;
+
+        console.log(big);
+        console.log(myInt);
+
+        console.log(5n + 2n);
+        console.log(5n - 2n);
+        console.log(5n * 2n);
+        console.log(5n / 2n);
+        console.log(5n % 2n);
+
+        // string
+        let greet = "Hello";
+        console.log(typeof (greet));
+
+        const question = '"what do you think of Javasript?" I asked';
+        console.log(question);
+
+        const answer = '"I think it\'s awesome" he answered confidently';
+        console.log(answer);
+
+        let greets = "Hello";
+        let moreGreet = greets + greets;
+        console.log(moreGreet);
+
+        const myName = "Luke";
+        console.log(`Hello, my name is ${myName}`);
+
+        // boolean (true or false)
+        let isTrue = true;
+        let isFalse = false;
+
+        console.log(typeof (isTrue));
+        console.log(typeof (isFalse));
+
+        let isGreater = a > b;
+        let isLess = a < b;
+
+        console.log(typeof (isGreater));
+        console.log(typeof (isLess));
+
+        // null
+        let empty = null;
+        console.log(empty);
+
+        // symbol
+        const id1 = Symbol("id1");
+        const id2 = Symbol("id2");
+        console.log(id1 === id2);
+
+    </script>
+</body>
+
+</html>

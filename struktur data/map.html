@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+
+<body>
+    <script>
+        // map
+        let myMap = new Map(
+            [
+                ['1', 'One'],
+                ['2', 'Two'],
+                ['3', 'Three'],
+            ]
+        );
+
+        console.log(myMap);
+
+        // panjang map size()
+        console.log(myMap.size);
+
+        // mengakses map get()
+        console.log(myMap.get('1'));
+        console.log(myMap.get('2'));
+        console.log(myMap.get('3'));
+
+        // menambahkan map set()
+        console.log(myMap.set('4', 'Four'));
+        console.log(myMap.get('4'));
+
+    </script>
+</body>
+
+</html>
