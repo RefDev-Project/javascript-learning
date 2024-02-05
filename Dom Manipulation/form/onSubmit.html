@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Submit</title>
+    <link rel="stylesheet" href="/form/onSubmit.css">
+</head>
+
+<body>
+    <div class="contents">
+        <h2 align="center">Isi data diri</h2>
+
+        <div class="formContent">
+            <form id="formDataDiri">
+                <div class="form-element">
+                    <label for="inputNama">Nama:</label><br />
+                    <input id="inputNama" type="text" name="nama" placeholder="Nama Anda" required /><br />
+                </div>
+
+                <div class="form-element">
+                    <label for="inputDomisili">Domisili:</label><br />
+                    <input id="inputDomisili" type="text" name="domisili" placeholder="Domisili Anda" required /><br />
+                </div>
+
+                <div class="form-element">
+                    <input id="submitButton" type="submit" value="Submit Data" />
+                </div>
+            </form>
+        </div>
+
+        <h3 id="messageAfterSubmit"></h3>
+    </div>
+    <script src="/form/onSubmit.js"></script>
+</body>
+
+</html>

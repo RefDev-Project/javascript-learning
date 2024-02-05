@@ -1,0 +1,18 @@
+.contents {
+  border: 2px solid black;
+  padding: 8px;
+
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-element {
+  margin: 8px;
+  text-align: center;
+}
+
+#notifikasiSisaKarakter {
+  visibility: hidden;
+}
