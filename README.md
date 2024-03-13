@@ -6,3 +6,6 @@ Materi Javascript Dasar - Fundamental
 - Function Programming
 - Asyncronous Process
 - Penanganan Error
+
+Running Code : 
+- ketik perintah "node (nama_file)
